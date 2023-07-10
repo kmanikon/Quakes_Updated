@@ -148,12 +148,12 @@ const Home = () => {
           </div>
         </div>
 
-        
+         
       </div>
       
       {showAbout && (
           <div className="border-2 border-gray-400 bg-[#c7d8f3] p-8 rounded-lg w-96 absolute" style={{bottom:'8%'}}>
-            This is an online tool for visualizing earthquake data collected by the US Geological survey over the last 30 days.
+            This is an online tool for visualizing earthquake data collected by the US Geological Survey over the last 30 days.
             Use the dropdown to choose an attribute to sort by and move the slider to adjust the number of quakes to display.
           </div>
         )}
