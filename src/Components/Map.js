@@ -212,9 +212,10 @@ const Map = () => {
                     
                     
                     </div>`,
+                    headerDisabled: true
               });
           
-              marker.addListener("click", () => {
+              marker.addListener("mouseover", () => {
                 infowindows.forEach((window) => window.close());
                 infowindow.open(map, marker);
               });
@@ -236,18 +237,20 @@ const Map = () => {
                 });
             
                 const infowindow = new maps.InfoWindow({
+                    
                     content: 
                         `<div style="text-align: center;">
                             <div>
                                 ${'You'}
                             </div>
                         
-                        </div>`,
+                        </div>`,                        
+                    headerDisabled: true
                 });
 
                 infowindow.open(map, marker);
             
-                marker.addListener("click", () => {
+                marker.addListener("mouseover", () => {
                     infowindows.forEach((window) => window.close());
                     infowindow.open(map, marker);
                 });
