@@ -242,8 +242,6 @@ const Map = () => {
                                 ${'You'}
                             </div>
                         
-                        
-                        
                         </div>`,
                 });
 
@@ -261,7 +259,7 @@ const Map = () => {
       
         return (
             <div style={mapContainerStyle}>
-                {quakes !== [] && 
+                {quakes?.length > 0 && 
                 <GoogleMapReact
                     bootstrapURLKeys={{ key: mapsKey }}
                     defaultCenter={{ lat: mylat, lng: mylong }}
@@ -291,7 +289,7 @@ const Map = () => {
         </Button>
 
         <div className="border-2 border-blue-500 mx-auto my-10 w-4/5 h-4/5">
-        { quakes !== [] && locationFetched === true && mylat !== null && mylong !== null &&
+        { quakes?.length > 0 && locationFetched === true && mylat !== null && mylong !== null &&
             <MapComponent quakes={quakes} />
         } 
         </div>
